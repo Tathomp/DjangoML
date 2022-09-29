@@ -1,4 +1,4 @@
-# backend/server/server/urls.py file
+# core/server/server/urls.py file
 from django.urls import include, re_path
 from django.contrib import admin
 from django.urls import path

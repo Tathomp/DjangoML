@@ -1,13 +1,13 @@
-# file backend/server/apps/ml/income_classifier/extra_trees.py
+# file core/server/apps/ml/income_classifier/random_forest.py
 import joblib
 import pandas as pd
 
-class ExtraTreesClassifier:
+class RandomForestClassifier:
     def __init__(self):
         path_to_artifacts = "../../research/"
-        self.values_fill_missing =  joblib.load(path_to_artifacts + "train_mode.joblib")
+        self.values_fill_missing = joblib.load(path_to_artifacts + "train_mode.joblib")
         self.encoders = joblib.load(path_to_artifacts + "encoders.joblib")
-        self.model = joblib.load(path_to_artifacts + "extra_trees.joblib")
+        self.model = joblib.load(path_to_artifacts + "random_forest.joblib")
 
     def preprocessing(self, input_data):
         # JSON to pandas DataFrame

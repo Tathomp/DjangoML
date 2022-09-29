@@ -1,4 +1,4 @@
-# backend/server/apps/endpoints/views.py file
+# core/server/apps/endpoints/views.py file
 from django.db import transaction
 from rest_framework import viewsets
 from rest_framework import mixins
@@ -148,7 +148,7 @@ class ABTestViewSet(
 
         except Exception as e:
             raise APIException(str(e))
-        
+
 # TODO Add date to filter
 class StopABTestView(views.APIView):
     def post(self, request, ab_test_id, format=None):
